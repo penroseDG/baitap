@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Xác nhận tuổi của bạn</title>
+</head>
+<body>
+
+<h1>Xác nhận tuổi của bạn</h1>
+
+<button onclick="confirmAge()">Kiểm tra tuổi</button>
+
+<div id="confirmationDialog" style="display: none;">
+  <p>Bạn đã đủ 18 tuổi để vào tù chưa?</p>
+  <button onclick="confirmAction(true)">Yes</button>
+  <button onclick="confirmAction(false)">No</button>
+</div>
+
+<script>
+function confirmAge() {
+  document.getElementById("confirmationDialog").style.display = "block";
+}
+
+function confirmAction(isOver18) {
+  if (isOver18) {
+    alert("Chúc mừng bạn đã đủ tuổi!");
+  } else {
+    alert("Hãy chắc chắn rằng bạn tuân thủ luật pháp!");
+  }
+  document.getElementById("confirmationDialog").style.display = "none";
+}
+</script>
+
+</body>
+</html>
